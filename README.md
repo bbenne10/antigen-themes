@@ -1,7 +1,7 @@
 antigen-themes
 ==============
 
-ZSH / antigen themes I use. Currently only contains my custom theme. 
+ZSH / antigen themes I have created.
 
 use it via antigen (no need to clone first):
 

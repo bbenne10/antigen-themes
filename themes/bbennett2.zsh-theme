@@ -3,10 +3,8 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%(?.%{$fg[green]%}.%{$fg[red]%}))"
 ZSH_THEME_GIT_PROMPT_DIRTY="±"
 
 function pyenv_prompt_info() {
-  ver=$(pyenv version-name)
-  if [[ "$ver" == 'system' ]]; then
-    echo ''
-  else
+  local ver=$(pyenv version-name)
+  if [ -n "$ver" -a "$ver" != 'system' ]; then
     echo "($ver)"
   fi
 }

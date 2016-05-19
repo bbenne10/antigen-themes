@@ -10,8 +10,10 @@ function pyenv_prompt_info() {
 }
 
 function git_prompt_info() {
-  # original version of this didn't seem to work on OpenBSD. This should have the
-  # same functionality as upstream where it works, but also works on OpenBSD.
+
+  # original version of this didn't seem to work on OpenBSD. This should have
+  # the same functionality as upstream where it works, but also works on my
+  # OpenBSD install.
 
   local ref
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then

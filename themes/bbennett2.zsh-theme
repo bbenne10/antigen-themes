@@ -28,4 +28,4 @@ function git_prompt_info() {
 }
 
 RPROMPT=$'\$(pyenv_prompt_info) %E%{$fg[magenta]%}%~%{$reset_color%}'
-PROMPT="%(?.%{$fg[green]%}.%{$fg[red]%})\$(git_prompt_info)─→%{$reset_color%} "
+PROMPT="%(!.%{$fg[blue]%}(root).)%(?.%{$fg[green]%}.%{$fg[red]%})\$(git_prompt_info)─→%{$reset_color%} "

@@ -1,8 +1,13 @@
 prompt_bbennett_precmd () {
   vcs_info
+  PROMPT_PREFIX=''
+  if [ "$SSH_CLIENT" != "" ]; then
+      # we're in an ssh session, add hostname
+      PROMPT_PREFIX="%{$fg[blue]%}%m%{$reset_color%} "
 
 
-  PROMPT="${vcs_info_msg_0_}%(?.%{$fg[green]%}.%{$fg[red]%})❯ %{$reset_color%}"
+  fi
+  PROMPT="${PROMPT_PREFIX}${vcs_info_msg_0_}%(?.%{$fg[green]%}.%{$fg[red]%})❯ %{$reset_color%}"
   RPROMPT=$'%E%{$fg[magenta]%}%~%{$reset_color%}'
 }
 

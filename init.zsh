@@ -1,16 +1,9 @@
-prompt_bbennett_pyenv () {
-  local ver=$(pyenv version-name)
-  if [ -n "$ver" -a "$ver" != 'system' ]; then
-    echo "($ver)"
-  fi
-}
-
 prompt_bbennett_precmd () {
   vcs_info
 
 
   PROMPT="${vcs_info_msg_0_}%(?.%{$fg[green]%}.%{$fg[red]%})❯ %{$reset_color%}"
-  RPROMPT=$'\$(prompt_bbennett_pyenv) %E%{$fg[magenta]%}%~%{$reset_color%}'
+  RPROMPT=$'%E%{$fg[magenta]%}%~%{$reset_color%}'
 }
 
 prompt_bbennett_setup () {

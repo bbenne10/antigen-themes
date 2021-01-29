@@ -1,3 +1,6 @@
+# NOTE: This project has been archived.
+New upstream is at https://git.bryan-bennett.com/bryan/antigen-themes
+
 antigen-themes
 ==============
 
